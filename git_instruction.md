@@ -45,3 +45,18 @@ each commit take a uniqe code
 `git push origin master` push
 
 `git pull origin maste` pull
+
+`git remote add remoteName remoteUrl` create a new remote
+
+`git show tree-ish` show what happend on commit
+
+`git tag -a tagName tree-ish` comment can added and if didnot mentioned tree-ish head is default
+
+`git push origin --tags` push tags
+
+`gpg --gen-key` create gpg key
+
+`gpg --list-keys` show list of keys
+
+all command can sign with this key
+
