@@ -1,4 +1,4 @@
-## HTMl
+## HTML
 
 - HTML stands for Hyper Text Markup Language
 - HTML is the standard markup language for creating Web pages
@@ -338,4 +338,110 @@ he `<caption>` tag must be inserted immediately after the `<table>` tag.
   * `<dt>`-define the term
   * `<dd>`-describe each term
 
-  
+
+**Block and Inline Elements**
+
+Here are the block-level elements in HTML:
+```
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+```
+
+Here are the inline elements in HTML:
+
+```
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+```
+
+`<div>`-is often used as a container for other HTML elements.
+
+`<span>`-is an inline container used to mark up a part of a text, or a part of a document.
+
+`class`-attribute is used to specify a class for an HTML element.
+
+`id`-attribute is used to specify a unique id for an HTML element.
+
+`<iframe>`-specifies an inline frame. an inline frame is used to embed another document within the current HTML document.
+
+>```html
+><iframe src="url" title="description">
+>```
+>```html
+><iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
+>```
+>
+>```html
+><iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example"></iframe>
+>```
+>
+>```html
+><iframe src="demo_iframe.htm" style="border:none;" title="IframeExample"></iframe>
+>```
+>
+
+
+
+**Iframe - Target for a Link**
+
+```html
+<iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+```
+
+
+
+**HTML Javascript**
+
+`<script>` tag is used to define a client-side script(JavaScript)
+
+`<nonscript>`-tag defines an alternate content to be displayed to users that have disabled script in their borwser.
+
+<hr>
+
+**`<meta>`**-is typically used to specify the character set,page description,keywords,author of the document,and viewport settings.
+
+**Define the character set used:**
+
+```html
+<meta charset="UTF-8"
+```
+
+**Define the character set used:**
+
+```html
+<meta name="keywords" content="HTML, CSS,JavaScript">
+```
+
+**Define a description of your web page:**
+
+```html
+<meta name="description" content="Free Web tutorials">
+```
+
+**Define the author of a page:**
+
+```html
+<meta name="author" content="John Doe">
+```
+
+**Refresh document every 30 seconds:**
+
+```html
+<meta http-equiv="refresh" content="30">
+```
+
+**Setting the viewport to make your website look good on all devices:**
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+>The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.
+>
+>```html
+><meta name="viewport" content="width=device-width, initial-scale=1.0">
+>```
+
+
+
+`<base>`-specifies the base URL and/or target for all relatvie URLs in a page.
