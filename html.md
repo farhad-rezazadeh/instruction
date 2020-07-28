@@ -64,6 +64,8 @@ The `style` attribute is used to add styles to an element, such as color, font, 
 > margin:$SIZE ===>defines a margin (space) outside the border
 >
 > background-image
+>
+> max-width
 
 The `title` attribute defines some extra information about an element.
 
@@ -270,7 +272,7 @@ By default, a link will appear like this (in all browsers):
 
 to add a border to a table, use the CSS `border` property:
 
-```html
+```css
 table, th, td {
   border: 1px solid black;
 }
@@ -445,3 +447,283 @@ Here are the inline elements in HTML:
 
 
 `<base>`-specifies the base URL and/or target for all relatvie URLs in a page.
+
+
+
+**HTML Layout Elements**
+
+Semantic elements = elements with a meaning.
+
+- `<header>` - Defines a header for a document or a section
+- `<nav>` - Defines a set of navigation links
+- `<section>` - Defines a section in a document
+- `<article>` - Defines an independent, self-contained content
+- `<aside>` - Defines content aside from the content (like a sidebar)
+- `<footer>` - Defines a footer for a document or a section
+- `<details>` - Defines additional details that the user can open and close on demand
+- `<summary>` - Defines a heading for the `<details>` element
+- `<figure>`-specifies self-contained content,like illustrations,diagrams,photos,code listings,etc
+- `<figcaption>`-define a caption for a `<figure>` element.
+- `<time>`-define specific time
+- `<main>` -specifies the main content of a document.
+- `<details>`-define additional details that the user can view or hide.
+- `<summary>`-defines a visible heading for `<details>` element.
+
+**HTML Computer Code Elements**
+
+`<kdb>`-keyboard input
+
+`<samp>`-define sample output from a computer program
+
+`<code>`-define a piece of computer code.
+
+`<var>`-define a variable in programming or in a mathematical experssion.
+
+**URL**
+
+> scheme://prefix.domain:port/path/filename
+
+- **scheme** - defines the **type** of Internet service (most common is **http or https**)
+- **prefix** - defines a domain **prefix** (default for http is **www**)
+- **domain** - defines the Internet **domain name** (like w3schools.com)
+- **port** - defines the **port number** at the host (default for http is **80**)
+- **path** - defines a **path** at the server (If omitted: the root directory of the site)
+- **filename** - defines the name of a document or resource
+
+**HTML forms**
+
+`<form>`-create an HTML form for user input
+
+> `action`-defines the action to be performed when the form submitted
+>
+> `target`-if the submit  if the submitted result will open in a new browser tab, a frame, or in the current window.
+>
+> `method` attribute specifies the HTTP method (**GET** or **POST**) to be used when submitting the form data.
+>
+> 
+
+`<input>`-can be displayed in many ways, depending on the `type` attribute.
+
+>"text"-Displays a single-line text input field
+>
+>"radio"-Displays a radio button
+>
+>"submit"-Displays a submit button
+
+**`<input type="text">`**
+
+defines a single-line input field for **text input**.
+
+`<label>`-defines a label for many form elements.
+
+```html
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+```
+
+**`<input type="radio">`**
+
+Radio buttons let a user select ONE of a limited number of choices.
+
+```html
+<form>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+</form>
+```
+
+**`<input type="submit">`**
+
+defines a button for **submitting** the form data to a **form-handler**.
+
+```html
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+
+The `<form>` element can contain one or more of the following form elements:
+```html
+<label>
+<input>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+```
+
+**`<select>`**-define a drop-down list
+
+```html
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+```
+
+**`<option>`**-define an option that can be selected.
+
+**`<size>`**-specify the number of visible values.
+
+```html
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="3">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+```
+
+**`multiple`**-allow user to select multiple more than one value.
+
+**`<optgroup>`**-to group related options in a drop-down list
+
+```html
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+
+
+
+**`<textarea>`**-define multiple line input field.
+
+```html
+<textarea name="massage" rows="10" cols="30">
+the cat was playing in the garden.
+</textarea>
+```
+
+**`<button>`**-defines a clickable button.
+
+```html
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+Try it Yourself »
+```
+
+**`<fieldset>`**-used to group related data in a form.
+
+**`<legend>`**-defines a caption for the `<fieldset>` element.
+
+**`<datalist>`**-specifies a list of pre-defind options for an `<input>` element
+
+The list attribute of the `<input>` element, must refer to the id attribute of the `<datalist>` element.
+
+```html
+<form>
+	<input list="browsers">
+	<datalist id="browsers">
+		<option value="internet explore">
+		<option value="firefox">
+		<option value="chrome">
+		<opiton value="safari">
+	</datalist>
+</form>
+```
+
+**`<output>`**-represents the result of calculation.
+
+```html
+<form action="/action_page.php"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+```
+
+
+
+**`<input type="password">`**-defines a password field
+
+**`<input type="reset">`**-defines a reset button that will reset all form value to their default
+
+**`<input type="checkbox">`**-defines a checkbox
+
+**`<input type="color">`**-used to input that should contain a color
+
+**`<input type="date">`**-used for input fields that should contain a date.
+
+> **`min`** & **`max`** attributes to add restrictions to dates
+
+**`<input type="datetime-local">`**-specifies a date and time input field, with no time zone.
+
+**`<input type="email">`**-is used for input fields that should contain an e-mail address.
+
+**`<input type="file">`**-define a file-select and "browse" button for file uploads.
+
+**`<input type="month">`**-allows the user to select a month and year.
+
+**`<input type="number">`**-define a numeric input field.
+
+> | Attribute | Description                                                  |
+> | :-------- | :----------------------------------------------------------- |
+> | checked   | Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio") |
+> | disabled  | Specifies that an input field should be disabled             |
+> | max       | Specifies the maximum value for an input field               |
+> | maxlength | Specifies the maximum number of character for an input field |
+> | min       | Specifies the minimum value for an input field               |
+> | pattern   | Specifies a regular expression to check the input value against |
+> | readonly  | Specifies that an input field is read only (cannot be changed) |
+> | required  | Specifies that an input field is required (must be filled out) |
+> | size      | Specifies the width (in characters) of an input field        |
+> | step      | Specifies the legal number intervals for an input field      |
+> | value     | Specifies the default value for an input field               |
+
+**`<input type="range">`**-define a control for entering a number whose exact value is not important
+
+>`min`
+>
+>`max` 
+>
+>`step`
+
+**`<input type="search">`**-is used for search fields
+
+**`<input type="tel">`**-is used for input fields that should contain a telephone number.
+
+**`<input type="time">`**-select time.
+
+**`<input type="url">`**-input field that should contain a URL address.
+
+**`<input type="week">`**-allows user to select a week and year.
+
