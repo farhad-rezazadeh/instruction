@@ -727,3 +727,78 @@ The list attribute of the `<input>` element, must refer to the id attribute of t
 
 **`<input type="week">`**-allows user to select a week and year.
 
+
+
+#### HTML input attributes
+
+<hr>
+
+
+`value`-specifies an initial value for an input field.
+
+`readonly`-specifies that an input field is read-only.
+
+`disabled`-specifies that an input field should be disabled.
+
+`size`-specifies the visible width, in characters of input field.
+
+`maxlength`-specifies the maximum number of character allowed in an input field.
+
+`min` and `max` attributes specify the minimum and maximum values for an input field.
+
+The `min` and `max` attributes work with the following input types: number, range, date, datetime-local, month, time and week.
+
+`multiple`-specifies that the user allowed to enter more than one value in an input field.
+
+`pattern`-specifies a regular expression that the input field's value is checked against ,when the form is submitted
+
+`placeholder`-specifies short a hint that describe the expected value of an input field.	
+
+`required`-specifies that an input field must be filled out before submitting the form.
+
+`step`-attribute specifies the legal number intervals for an input field.
+
+`height` and `width` attributes specify the height and width of an `<input type="image">` element.
+
+`<input type="image">` defines an image as a submit button.
+
+`list` attribute refers to a `<datalist>` element that contains pre-defined options for an `<input>`
+
+`autocomplete` attribute specifies whether a form or an input field should have autocomplete on or off.
+
+#### HTML input form* attributes
+
+<hr>
+
+`form` attribute specifies the form the <input> element belongs to.
+
+```html
+<form action="/action_page.php" id="form1">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+```
+
+`formaction` attribute specifies the URL of the file that will process the input when the form is submitted.
+
+```html
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+```
+
+`formenctype` attribute specifies how the form-data should be encoded when submitted (only for forms with method="post").
+
+`formmethod` attribute works with the following input types: submit and image.
+
+`formtarget` a attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.
+
